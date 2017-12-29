@@ -1,4 +1,6 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.000     2017-12-29 19:11:07+08:00 Asia/Kuala_Lumpur
     Initial release.

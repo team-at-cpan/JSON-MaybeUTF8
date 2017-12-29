@@ -1,4 +1,5 @@
 package JSON::MaybeUTF8;
+# ABSTRACT: Simple wrapper for explicit JSON Unicode text/UTF-8 byte functions
 
 use strict;
 use warnings;

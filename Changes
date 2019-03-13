@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.001     2019-03-13 13:14:37+08:00 Asia/Kuala_Lumpur
     Retains a separate JSON instance for each function.
 
     This is due to some reports of valid Unicode string data not decoding

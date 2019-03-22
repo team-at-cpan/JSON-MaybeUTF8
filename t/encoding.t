@@ -30,10 +30,7 @@ while(my ($as_json, $as_perl) = splice @cases, 0, 2) {
 
         cmp_deeply(decode_json_text($as_json), $as_perl, 'string decoding');
         my $encoded = Encode::encode_utf8($as_json);
-        note sprintf '%vx', $encoded;
-        note 'decode things now';
         cmp_deeply(decode_json_utf8($encoded), $as_perl, 'UTF-8 decoding');
-        note 'have decoded things now';
         done_testing;
     }
 }

@@ -22,10 +22,21 @@ database, cache and I/O.
 
 This is a trivial wrapper around two other modules.
 
+## BOM removal
+
+The `$JSON::Maybe::UTF8::REMOVE_BOM` flag is **set by default** due
+to [https://github.com/rurban/Cpanel-JSON-XS/issues/125](https://github.com/rurban/Cpanel-JSON-XS/issues/125). If you would
+prefer to disable this, add `$JSON::Maybe::UTF8::REMOVE_BOM = 0;`
+in your code.
+
+Note that this only affects things when [Cpanel::JSON::XS](https://metacpan.org/pod/Cpanel::JSON::XS) is used (preferred by [JSON::MaybeXS](https://metacpan.org/pod/JSON::MaybeXS)
+if it can be loaded).
+
 ## decode\_json\_utf8
 
 Given a UTF-8-encoded JSON byte string, returns a Perl data
-structure.
+structure. May optionally remove the UTF-8 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark#UTF-8)
+if it exists.
 
 ## encode\_json\_utf8
 

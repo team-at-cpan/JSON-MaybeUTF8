@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+2.000     2021-04-27 17:00:42+08:00 Asia/Kuala_Lumpur
     [API Changes]
     - supports a `format_json_text` function for indented JSON
 

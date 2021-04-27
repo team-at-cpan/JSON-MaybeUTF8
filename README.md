@@ -12,7 +12,7 @@ JSON::MaybeUTF8 - provide explicit text/UTF-8 JSON functions
 
 # DESCRIPTION
 
-Combines [JSON::MaybeXS](https://metacpan.org/pod/JSON::MaybeXS) with [Unicode::UTF8](https://metacpan.org/pod/Unicode::UTF8) to provide
+Combines [JSON::MaybeXS](https://metacpan.org/pod/JSON%3A%3AMaybeXS) with [Unicode::UTF8](https://metacpan.org/pod/Unicode%3A%3AUTF8) to provide
 4 functions that handle the combinations of JSON and UTF-8
 encoding/decoding.
 
@@ -29,7 +29,7 @@ to [https://github.com/rurban/Cpanel-JSON-XS/issues/125](https://github.com/rurb
 prefer to disable this, add `$JSON::Maybe::UTF8::REMOVE_BOM = 0;`
 in your code.
 
-Note that this only affects things when [Cpanel::JSON::XS](https://metacpan.org/pod/Cpanel::JSON::XS) is used (preferred by [JSON::MaybeXS](https://metacpan.org/pod/JSON::MaybeXS)
+Note that this only affects things when [Cpanel::JSON::XS](https://metacpan.org/pod/Cpanel%3A%3AJSON%3A%3AXS) is used (preferred by [JSON::MaybeXS](https://metacpan.org/pod/JSON%3A%3AMaybeXS)
 if it can be loaded).
 
 ## decode\_json\_utf8
@@ -53,10 +53,19 @@ Perl's internal encoding), returns a Perl data structure.
 Given a Perl data structure, returns a JSON string composed
 of Unicode characters (in Perl's internal encoding).
 
+## encode\_json\_text
+
+Given a Perl data structure, returns a formatted JSON string composed
+of Unicode characters (in Perl's internal encoding).
+
+This is functionally identical to ["encode\_json\_text"](#encode_json_text), but with
+indentation to make it readable, and with defined key ordering which
+should make it easier to `diff` two different data structures.
+
 # AUTHOR
 
 Tom Molesworth <TEAM@cpan.org>
 
 # LICENSE
 
-Copyright Tom Molesworth 2017. Licensed under the same terms as Perl itself.
+Copyright Tom Molesworth 2017-2021. Licensed under the same terms as Perl itself.

@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    [API Changes]
+    - supports a `format_json_text` function for indented JSON
 
 1.002     2019-03-22 13:47:33+08:00 Asia/Kuala_Lumpur
     Strip BOM characters by default in `decode_json_text` and `decode_json_utf8`.

@@ -127,7 +127,7 @@ sub encode_json_text {
     $json->encode(shift)
 }
 
-=head2 encode_json_text
+=head2 format_json_text
 
 Given a Perl data structure, returns a formatted JSON string composed
 of Unicode characters (in Perl's internal encoding).
